@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f2c400">
+<title>PARIS — CITY OF POSSIBILITIES</title>
+<meta name="description" content="Paris arrondissement par arrondissement : récits, balades, lieux, événements et galeries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home">◆ PARIS <span>— CITY OF POSSIBILITIES</span></a>
+  <nav>
+    <a href="#home">Accueil</a><a href="#carte">Carte</a>
+    <div class="dropdown"><button>Arrondissements ▾</button><div id="districtMenu"></div></div>
+    <a href="#events">Événements</a><a href="#gallery">Galerie</a><a href="#about">À propos</a>
+  </nav>
+  <div class="tools"><input id="search" placeholder="Rechercher…"><button id="theme">☼</button><button id="fontMinus">A−</button><button id="fontPlus">A+</button></div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="eyebrow">48.8566° N · 2.3522° E</div>
+  <h1>PARIS <em>ARRONDISSEMENT PAR ARRONDISSEMENT.</em></h1>
+  <p>Un carnet de découverte de Paris, non pas comme une liste d'incontournables, mais comme une ville de quartiers, d'ambiances, de rues et de saisons.</p>
+  <div class="actions"><a class="primary" href="#carte">EXPLORER PARIS ↗</a><a href="#intro">POURQUOI PARIS ? →</a></div>
+</section>
+
+<section id="intro" class="intro">
+  <div><span class="eyebrow">UNE VILLE EN 20 CHAPITRES</span><h2>Paris ne se visite pas d'un seul regard.</h2></div>
+  <p>Le Louvre n'est pas le 1er arrondissement. Montmartre n'est pas tout le 18e. Belleville ne raconte pas la même histoire que le Père-Lachaise. Ici, chaque arrondissement devient un récit autonome : une balade, des lieux, des détails, une ambiance et les événements qui font vivre le quartier au fil de l'année.</p>
+</section>
+
+<section id="carte" class="section">
+  <div class="section-head"><div><span class="eyebrow">CARTE</span><h2>Les 20 arrondissements</h2></div><p>Clique sur un marqueur pour ouvrir le récit.</p></div>
+  <div id="map"></div>
+</section>
+
+<section id="districts" class="section">
+  <div class="section-head"><div><span class="eyebrow">LES PARCOURS</span><h2>Paris quartier par quartier</h2></div><p>20 chapitres · récits · balades · événements · photos</p></div>
+  <div id="districtsGrid"></div>
+</section>
+
+<section id="events" class="section events-section">
+  <div class="section-head"><div><span class="eyebrow">CALENDRIER</span><h2>Paris au fil des saisons</h2></div><p>Les grands rendez-vous récurrents à rattacher aux arrondissements.</p></div>
+  <div id="calendar"></div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="section-head"><div><span class="eyebrow">GALERIE</span><h2>Paris en images</h2></div><p>Photos à remplacer progressivement par tes propres images.</p></div>
+  <div class="gallery" id="galleryGrid"></div>
+</section>
+
+<section id="about" class="about">
+  <span class="eyebrow">À PROPOS</span>
+  <h2>Un Paris vécu plutôt qu'un Paris récité.</h2>
+  <p>Ce carnet reprend la logique de <strong>LONDON — CITY OF POSSIBILITIES</strong> : une ville découpée en territoires autonomes, chacun avec son histoire, sa promenade et sa personnalité. Le but n'est pas de tout voir. C'est de comprendre pourquoi on aime revenir dans certains quartiers.</p>
+  <div class="links"><a href="https://twagirumukiza.github.io/London/">← London</a><a href="https://twagirumukiza.github.io/Mexico/">Mexico</a><a href="https://twagirumukiza.github.io/PRAGUE/">Prague</a></div>
+</section>
+</main>
+
+<footer>PARIS — CITY OF POSSIBILITIES · Carnet de découverte · Photos personnelles à venir</footer>
+<div id="lightbox" class="lightbox"><button>×</button><img><div class="caption"></div></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
